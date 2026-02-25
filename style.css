@@ -457,8 +457,37 @@ body {
 }
 
 @media (max-width: 768px) {
+    .desktop-content {
+        padding: 1.5rem 0.5rem;
+        gap: 2rem;
+    }
+    .window-bar {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .retro-menubar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
     .menu-items {
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        order: 3;
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+        border-top: 1px dashed #ccc;
+    }
+    .menu-start {
+        order: 1;
+    }
+    .menu-clock {
+        order: 2;
+    }
+    .window-content {
+        padding: 1rem;
     }
     .hero-content {
         flex-direction: column-reverse;
@@ -471,11 +500,53 @@ body {
     .about-grid {
         grid-template-columns: 1fr;
     }
+    .about-text h3 {
+        font-size: 1.5rem;
+    }
+    .retro-link {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+        word-break: break-all;
+    }
+    .contact-block {
+        padding: 0.8rem;
+    }
+    .contact-block li {
+        font-size: 0.9rem;
+    }
     .resume-columns {
         grid-template-columns: 1fr;
     }
+    .retro-fieldset {
+        padding: 1rem;
+    }
+    .retro-fieldset legend {
+        font-size: 1.2rem;
+    }
+    .exp-header {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
     .glitch-text {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    .hero-role {
+        font-size: 1.2rem;
+    }
+    .retro-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    .pixel-img {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    .project-content {
+        height: auto;
+        min-height: unset;
     }
 }
 
@@ -611,9 +682,41 @@ body {
     }
     .project-sidebar {
         width: 100%;
-        height: 150px;
+        height: auto;
+        max-height: 150px;
         border-right: none;
         border-bottom: 2px solid #000;
+    }
+    .project-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .project-item {
+        padding: 8px 10px;
+    }
+    .project-preview {
+        padding: 1.5rem 1rem;
+    }
+    .project-preview h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+    .proj-meta {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+    .proj-desc {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+    .proj-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    .retro-btn-sm {
+        justify-content: center;
+        width: 100%;
+        padding: 0.8rem;
     }
 }
 
