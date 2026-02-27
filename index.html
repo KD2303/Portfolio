@@ -212,7 +212,12 @@
                     <div class="project-explorer">
                         <!-- Sidebar List -->
                         <div class="project-sidebar">
-                            <div class="sidebar-header">Files:</div>
+                            <div class="sidebar-header">
+                                <span>Files:</span>
+                                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle project menu">
+                                    <i class="fa-solid fa-bars"></i>
+                                </button>
+                            </div>
                             <ul class="project-list" id="project-list">
                                 <li class="project-item active" data-id="1">
                                     <i class="fa-regular fa-file-code"></i> AlgoFight
@@ -331,6 +336,14 @@
         const projDesc = document.getElementById('proj-desc');
         const projGithub = document.getElementById('proj-github');
         const projDemo = document.getElementById('proj-demo');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const projectListContainer = document.getElementById('project-list');
+
+        if (mobileMenuBtn && projectListContainer) {
+            mobileMenuBtn.addEventListener('click', () => {
+                projectListContainer.classList.toggle('open');
+            });
+        }
 
         projectList.forEach(item => {
             item.addEventListener('click', () => {
@@ -338,6 +351,11 @@
                 projectList.forEach(p => p.classList.remove('active'));
                 // Add active class to clicked
                 item.classList.add('active');
+
+                // Close mobile menu if open
+                if (projectListContainer.classList.contains('open')) {
+                    projectListContainer.classList.remove('open');
+                }
 
                 // Update Content
                 const id = item.getAttribute('data-id');
