@@ -291,6 +291,18 @@ body {
     margin-bottom: 2rem;
 }
 
+.leetcode-link {
+    background: #FFA116;
+    color: #000000;
+    border: 2px solid #FFA116;
+}
+
+.leetcode-link:hover {
+    background: #000000;
+    color: #FFA116;
+    border: 2px solid #FFA116;
+}
+
 .contact-block {
     background: #eee;
     padding: 1rem;
